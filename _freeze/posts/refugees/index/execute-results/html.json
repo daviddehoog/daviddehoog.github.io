@@ -1,0 +1,14 @@
+{
+  "hash": "3ae6fff50f8d58546bd10b22908f4e7e",
+  "result": {
+    "markdown": "---\ntitle: \"Refugees - Tidy Tuesday Week 34, 2023\"\nauthor: \"David de Hoog\"\ndate: \"2023-08-22\"\ncategories: [tidytuesday,visualisation]\n#image: \"image.jpg\"\ndraft: true\n---\n\n\n## Overview\n\nThis is my participation in this week's [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) social dataset project: A weekly data project in R from the [R4DS online learning community](https://www.rfordatasci.com).\n\nYou can see my final visualisation @fig-map below.\n\nI am using this to practise the linear regression skills I have been learning recently.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n```\n:::\n\n::: {.cell hash='index_cache/html/load-data_21ecc5e75cb56b52a74a5fce22353964'}\n\n```{.r .cell-code}\ntuesdata <- tidytuesdayR::tt_load('2023-08-22')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n\n\tDownloading file 1 of 1: `population.csv`\n```\n:::\n\n```{.r .cell-code}\npopulation <- tuesdata$population\n```\n:::\n\n\nHaving examined the dataset, let's select a few interesting variables to explore. H\n\n\n::: {.cell}\n\n```{.r .cell-code}\npopulation %>% \n  dplyr::select(year, refugees, )\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 64,809 × 2\n    year refugees\n   <dbl>    <dbl>\n 1  2010        0\n 2  2010       30\n 3  2010        6\n 4  2010     6398\n 5  2010        5\n 6  2010        6\n 7  2010        5\n 8  2010        5\n 9  2010       49\n10  2010        5\n# ℹ 64,799 more rows\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
