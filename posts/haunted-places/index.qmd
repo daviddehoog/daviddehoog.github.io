@@ -1,0 +1,253 @@
+---
+title: "Tidy Tuesday - Haunted Places in the United States (2023, Week 41)"
+author: "David de Hoog"
+date: "12 October 2023"
+editor: visual
+categories: [tidytuesday]
+image: "index_files/figure-html/vis-1.png"
+description: "Research question on haunted places in the United States"
+draft: true
+---
+
+## Reflections
+
+1.  Ran into an interesting error:
+
+    `Warning: GDAL Error 1: PROJ: proj_create_from_database: Cannot find proj.dbError: node stack overflow Error during wrapup: node stack overflow Error: no more error handlers available (recursive errors?); invoking 'abort' restart.`
+
+Turned out the issue was that the \$PROJ_LIB environmental variable wasn't set on my system (MacOSX). I tried updating all my Homebrew managed packages, but no luck. I ended up setting the variable in my \~/bash_profile file. I'm looking at a system-wide, rather than user-specific, fix. Turns out I'm still using bash (version 3.2.57(1)) rather than the newer, default zsh. So, having upgraded, I then needed to update my /etc/zshrc file to export the PROJ_LIB variable again. The gory details are helpfully set out in: https://scriptingosx.com/2019/06/moving-to-zsh/
+
+## Analysis
+
+### Setup Environment
+
+As a step towards reproducibility, I use an RStudio project and the `renv` package tools.
+
+```{r}
+#| label: setup-env
+#| message: false
+
+library(tidytuesdayR)
+library(tidyverse)
+library(sf)
+library(units)
+library(rnaturalearth)
+library(tmap)
+
+```
+
+### Data
+
+This week's dataset is a compilation of Haunted Places in the United States.
+
+```{r}
+#| label: setup-data
+#| cache: true
+#| message: false
+#| warning: false
+
+tuesdata <- tidytuesdayR::tt_load('2023-10-10')
+
+haunted_places <- tuesdata$haunted_places
+
+rm(tuesdata)
+
+```
+
+The `haunted_places` data frame contains information about places, including a location, including multiple latitude and longitude coordinates per place, and a description.
+
+### Exploratory data analysis
+
+I explored a few ideas:
+
+-   How many haunted places were there per State in the United States?
+
+-   Are there any clusters of haunted places in the same location? By State?
+
+-   How far away is each haunted place is from the nearest city center? (This was my first choice, but on digging into the data some more, it became clear that both the location and city centre locations were geocoded using Google's API from the same data. So, analysis of this would really just be about the accuracy (or otherwise) of Google's geocoding service.)
+
+-   Could I extract some categories from the text descriptions, to make an interesting choropleth map?
+
+```{r}
+#| label: eda
+
+haunted_places
+
+haunted_places %>% 
+  group_by(state) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+haunted_places %>% 
+  filter((is.na(longitude) == FALSE) & (is.na(latitude) == FALSE)) %>% 
+  group_by(state, latitude, longitude) %>% 
+  count() %>% 
+  filter(n > 1) %>% 
+  group_by(state) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+haunted_places %>% 
+  filter((is.na(longitude) == FALSE) & (is.na(latitude) == FALSE)) %>% 
+  mutate(
+    long_diff = abs(longitude - city_longitude),
+    lat_diff = abs(latitude - city_latitude)
+    ) %>% 
+  summarize(
+    avg_long_diff = mean(long_diff, na.rm = TRUE),
+    avg_lat_diff = mean(lat_diff, na.rm = TRUE)
+  )
+
+haunted_places %>% 
+  mutate(extracted = str_extract(description, "cemetery")) %>% 
+  filter(is.na(extracted) != TRUE) %>% 
+  count() / nrow(haunted_places) * 100 # 7.5% cemeteries
+
+haunted_places %>% 
+  mutate(extracted = str_extract(description, "old")) %>% 
+  filter(is.na(extracted) != TRUE) %>% 
+  count() / nrow(haunted_places) * 100 # 32.5% old
+
+```
+
+### Analysis
+
+I decided to combine a couple of these ideas and do a choropleth map, showing whether haunted places occur in metropolitan or rural areas.
+
+#### Research question: How far away is each haunted place is from the nearest city center?
+
+This should give me a chance to practice some dataset transformations, plotting histograms and some map-making.
+
+My aim is to determine the distance between the haunted places (`longitude`, `latitude`) and the nearest city centres (`city_longitude`, `city_latitude)`. I intend to take these as absolute values and then plot these on a histogram. Then, based on the distances, I will create an index which can inform a choropleth map using data from `Natural Earth`.
+
+```{r}
+#| label: ana-clean
+
+haunted_places %>% 
+  filter(
+    (is.na(longitude) == FALSE) & (is.na(latitude) == FALSE) &
+    (is.na(city_longitude) == FALSE) & (is.na(city_latitude) == FALSE)
+  ) %>% 
+  filter(longitude < -50 & latitude > 20) -> places_clean
+
+```
+
+Now to convert the data into spatial types, ready for calculation.
+
+Because of limitations in the sf geometry type, each data frame or tibble can only have one geometry column, so create one per set of points.
+
+It is also necessary to convert from a geographic coordinate system to an equidistant conical projection to more accurately calculate distances between the haunted places and the city center points (CRS 102010).
+
+```{r}
+#| label: ana-calc
+
+# Assume CRS is web standard, 4326
+crs_vis <- 4326
+crs_calc <- 32663
+
+# Given only one sfc per data.frame, create one for haunted places ...
+places_clean %>% 
+  st_as_sf(coords = c("longitude", "latitude"), crs = crs_vis) -> places_sf
+
+# ... and a second one for cities
+places_clean %>%
+  st_as_sf(coords = c("city_longitude", "city_latitude"), crs = crs_vis) -> cities_vis
+
+#cities_vis %>% 
+#  st_transform(crs = crs_calc) -> cities_calc
+
+# Calculate the distance, over the sphere, between each pair of points
+#places_sf %>% 
+#  st_transform(crs = crs_calc) %>%
+#  mutate(distance = st_distance(., cities_calc, by_element = TRUE)) %>% 
+#  st_transform(crs = crs_vis) -> places_vis
+
+```
+
+```{r}
+#| label: ana-vis
+
+#max(places_vis$distance) # around 6,985,602 m or 6000+km
+#min(places_vis$distance)
+
+#places_vis %>% 
+#  mutate(distance_km = set_units(distance, km)) %>% 
+#  arrange(desc(distance_km)) %>% 
+#  select(city, distance_km, everything())
+
+```
+
+And, so, to answer our research question: based on these data, ...
+
+```{r}
+
+#ggplot(places_vis, aes(x = distance)) +
+#  geom_histogram(binwidth = 1000)
+```
+
+### Visualization
+
+To start, a quick visualization of the data set on a map of the United States.
+
+```{r}
+#| label: vis-prep-1
+
+#us_map <- ne_countries(country = "united states of america", scale = "medium", #returnclass = "sf") # assume CRS is 4326
+
+#tm_shape(places_vis) +
+#  tm_dots(col = "blue") +
+#  tm_shape(us_map) +
+#   tm_borders()
+
+```
+
+Looks like we've got a bit of data cleaning to do ...
+
+```{r}
+#| label: vis-prep-2
+
+
+
+```
+
+And finally, the plot:
+
+```{r}
+#| label: vis
+#| fig-cap: "When will the first sub-2 hour London Marathon winner be?"
+#| message: false
+
+#ggplot(data = plotting_data, aes(x = Year, y = Time_n)) +
+#  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5, alpha = 0.9) +
+#  geom_point(aes(color = Prediction)) +
+#  geom_hline(aes(yintercept = target_Time), linetype = "dashed", color = "darkgrey") +
+#  geom_vline(aes(xintercept = tipping_Year), linetype = "dashed", color = "darkgrey") +
+#  geom_point(data = tipping_point, color = "black")
+
+```
+
+```{r}
+#| label: pack-up-env
+#| echo: false
+
+#rm(cities_sf)
+
+```
+
+## Appendices
+
+### Session Info
+
+```{r}
+#| label: app-session-info
+#| echo: false
+
+sessionInfo()
+
+```
+
+### Changelog
+
+2023-09-26 1.0 Initial version.
+
+### References

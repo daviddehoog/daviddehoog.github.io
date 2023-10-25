@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Policy-Based Evidence"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/daviddehoog
+  page-footer: "This work is licensed under<br><a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International</a>."
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+
+editor: visual

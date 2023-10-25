@@ -1,0 +1,208 @@
+---
+title: "Tidy Tuesday - Patient Risk Profiles (2023, Week 44)"
+author: "David de Hoog"
+date: "22 October 2023"
+editor: visual
+categories: [tidytuesday]
+image: "index_files/figure-html/vis-1.png"
+description: "Patient risk profiles"
+draft: true
+---
+
+## Reflections
+
+## Analysis
+
+### Setup Environment
+
+As a step towards reproducibility, I use an RStudio project and the `renv` package tools.
+
+```{r}
+#| label: setup-env
+#| message: false
+
+library(tidytuesdayR)
+library(tidyverse)
+library(janitor)
+
+```
+
+### Data
+
+This week's dataset is a compilation of Haunted Places in the United States.
+
+```{r}
+#| label: setup-data
+#| cache: true
+#| message: false
+#| warning: false
+
+tuesdata <- tidytuesdayR::tt_load('2023-10-24')
+
+patient_risk_profiles <- tuesdata$patient_risk_profiles
+
+rm(tuesdata)
+
+```
+
+The `patient_risk_profiles` tibble contains (simulated) information about 100 patients, including their age, sex, existing medical conditions and predictions about their likely medical conditions in the next 12 months.
+
+I settled pretty quickly on a visualisation to tackle. Aiming for something like a demographics pyramid with the age categories on the vertical axis (possibly with one sex on either side), and one or more of the predicted risks on the horizontal axis. I might end up with a faceted plot to see any interesting differences in risk profiles for different existing conditions.
+
+There is definitely going to be some cleaning and re-shaping involved to get this into a plottable format.
+
+### Analysis
+
+#### \[Overview and research question\]
+
+```{r}
+#| label: eda-clean
+
+# Create a single, age group column in ten-year groupings, as a factor.
+patient_risk_profiles %>%
+  # Replace the 0s with NAs
+  mutate(across(starts_with("age group: "), ~ na_if(.x, 0))) %>% 
+  # Collapse age group columns into one age_group column, with the age ranges as values and dropping any rows with NA values.
+  pivot_longer(
+    cols = starts_with("age group: "),
+    names_prefix = "age group: ",
+    names_to = "age_group",
+    values_drop_na = TRUE,
+  ) %>% 
+  # Clean up the age group values by removing spaces and convert to factors.
+  mutate(age_group = str_replace_all(age_group, "\\s", ""), age_group = as.factor(age_group)) %>%
+  # Collapse the five-year groups into ten year groups.
+  mutate(age_group = 
+           fct_collapse(age_group,
+                `0 - 9` = c("0-4", "5-9"),
+                `10 - 19` = c("10-14", "15-19"),
+                `20 - 29` = c("20-24", "25-29"),
+                `30 - 39` = c("30-34", "35-39"),
+                `40 - 49` = c("40-44", "45-49"),
+                `50 - 59` = c("50-54", "55-59"),
+                `60 - 69` = c("60-64", "65-69"),
+                `70 - 79` = c("70-74", "75-79"),
+                `80 - 89` = c("80-84", "85-89"),
+                `over 90` = c("90-94"),
+                )
+         ) %>% 
+  # Filter entries where both sexes are selected (for plotting purposes only).
+  filter(!(`Sex = FEMALE` == 1 & `Sex = MALE` == 1)) %>%
+  # Effectively combine the two sex columns into one.
+  mutate(sex = case_when(
+    `Sex = FEMALE` == 1 ~ "Female",
+    `Sex = MALE` == 1 ~ "Male"
+    ) 
+  ) %>%
+  # Clean up and rationalise the columns.
+  select(personId, sex, age_group, everything(), -`Sex = FEMALE`, -`Sex = MALE`) %>% 
+  clean_names() -> patient_risk_clean
+
+```
+
+With a clean dataset, time to look for some interesting relationships to visualise.
+
+```{r}
+#| label: eda-calc-1
+
+# Create a tibble of each risk, its occurence and percentage.  
+patient_risk_clean %>%
+  # Add up each of the columns of previous year diagnoses.
+  summarize(across(ends_with("in_prior_year"), ~ sum(.x))) %>%
+  # Convert the wide table into a longer one, with one row per risk factor.
+  pivot_longer(
+    cols = everything(),
+    names_to = "in_prior_year",
+    names_pattern = "(.*)_in_prior_year",
+    values_to = "count"
+    ) %>% 
+  # Create a percentage column.
+  mutate(percentage = count / nrow(patient_risk_clean) * 100) %>% 
+  # Sort in descending order by the number of times a risk factor occurs.
+  arrange(desc(count))
+
+```
+
+```{r}
+#| label: eda-calc-2
+
+patient_risk_clean %>% 
+  summarize(across(starts_with("predicted_risk_of_"), ~ sum(.x))) %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "predicted_risk_of",
+    names_pattern = "predicted_risk_of_(.*)",
+    values_to = "count"
+    ) %>% 
+  mutate(percentage = count / nrow(patient_risk_clean) * 100) %>% 
+  arrange(desc(count))
+
+```
+
+```{r}
+#| label: ana-vis
+
+
+
+```
+
+And, so, to answer our research question: based on these data, ...
+
+```{r}
+
+
+```
+
+### Visualization
+
+To start, a quick visualization of the data set on a map of the United States.
+
+```{r}
+#| label: vis-prep-1
+
+
+```
+
+Looks like we've got a bit of data cleaning to do ...
+
+```{r}
+#| label: vis-prep-2
+
+
+
+```
+
+And finally, the plot:
+
+```{r}
+#| label: vis
+#| fig-cap: "When will the first sub-2 hour London Marathon winner be?"
+#| message: false
+
+
+
+```
+
+```{r}
+#| label: pack-up-env
+#| echo: false
+
+
+
+```
+
+## Appendices
+
+### Session Info
+
+```{r}
+#| label: app-session-info
+#| echo: false
+
+sessionInfo()
+
+```
+
+### Changelog
+
+### References
