@@ -1,0 +1,39 @@
+---
+title: "Refugees - Tidy Tuesday Week 34, 2023"
+author: "David de Hoog"
+date: "2023-08-22"
+categories: [tidytuesday,visualisation]
+#image: "image.jpg"
+draft: true
+---
+
+## Overview
+
+This is my participation in this week's [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) social dataset project: A weekly data project in R from the [R4DS online learning community](https://www.rfordatasci.com).
+
+You can see my final visualisation @fig-map below.
+
+I am using this to practise the linear regression skills I have been learning recently.
+
+```{r}
+#| label: setup-env
+#| message: false
+
+library(tidyverse)
+```
+
+```{r}
+#| label: load-data
+#| cache: true
+#| message: false
+
+tuesdata <- tidytuesdayR::tt_load('2023-08-22')
+population <- tuesdata$population
+```
+
+Having examined the dataset, let's select a few interesting variables to explore. H
+
+```{r}
+population %>% 
+  dplyr::select(year, refugees, )
+```

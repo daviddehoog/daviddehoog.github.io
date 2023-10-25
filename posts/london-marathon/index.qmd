@@ -1,0 +1,233 @@
+---
+title: "Tidy Tuesday - London Marathon (2023, Week 17)"
+author: "David de Hoog"
+date: "12 September 2023"
+date-modified: "26 September 2023"
+editor: visual
+categories: [tidytuesday, regression]
+image: "index_files/figure-html/vis-1.png"
+description: "When can we expect the magic 2:00 hr mark to be broken at the London Marathon?"
+---
+
+## Reflections
+
+1.  Initially, this wasn't a dataset where a plot leaped out at me. This is a not really a good dataset for linear regression, but I wanted to explore a real world application of prediction using linear regression and practice making a visualisation.
+2.  I ran into an interesting limitation in `stats::lm()` trying to construct a linear model. This function doesn't work with the difftime data type. I worked around this by converting the difftime into a numeric data type and then converting it back to a datetime type after the model was constructed. This did limit how I could plot the Some older Stack Overflow posts confirmed this is a valid (if awkward) approach.
+3.  It took a lot of time and wrangling to get the plot looking not great. I'm hoping this will improve over time!
+
+## Analysis
+
+### Setup Environment
+
+As a step towards reproducibility, I use an RStudio project and the `renv` package tools.
+
+```{r}
+#| label: setup-env
+#| message: false
+
+library(tidytuesdayR)
+library(tidyverse)
+library(lubridate)
+
+```
+
+### Data
+
+This week's dataset is about the London Marathon and has been scraped from Wikipedia.
+
+```{r}
+#| label: setup-data
+#| cache: true
+#| message: false
+#| warning: false
+
+tuesdata <- tidytuesdayR::tt_load('2023-04-25')
+
+winners <- tuesdata$winners
+london_marathon <- tuesdata$london_marathon
+
+rm(tuesdata)
+
+```
+
+The `london_marathon` data frame contains information about the race itself, including when it was held, competitors and fundraising.
+
+The `winners` data frame contains information about the race winners in various categories.
+
+### Exploratory data analysis
+
+```{r}
+#| label: eda
+
+winners %>% 
+  right_join(london_marathon, by = 'Year')
+
+```
+
+To start, a quick visualization of the data set.
+
+```{r}
+#| label: eda-plot
+
+winners %>% 
+  ggplot(aes(x = Year, y = Time, color = Category)) +
+    geom_point() +
+    geom_line()
+
+```
+
+On a quick look, a couple of ideas for possible visualisations occurred to me:
+
+1.  How have winners' finishing times changed over time? (Decreased, significantly, based on my initial plot.)
+2.  How have entrance success rates and completion rates changed over time? (Probably got harder to enter, so those that get to the start line are emore likely to complete.)
+
+Neither of these grabbed my imagination, so I visited the [London Marathon Wikipedia page](https://en.wikipedia.org/wiki/London_Marathon) for some inspiration. A few clicks later and I was reading about the quest for a sub-two hour marathon, which got me thinking \... based on these data, when can we expect the magic 2:00 hr mark to be broken at the London Marathon?
+
+### Analysis
+
+#### Research question: Based on these data, when can we expect the magic 2:00 hr mark to be broken at the London Marathon?
+
+This gave me a chance to practice linear regression, which I've been learning with Datacamp.
+
+My aim is to create a model that reflects the relationship between finish times (`Time`, response variable) over time (`Year`, explanatory variable), and use that model to estimate the explanatory variable (`Year`) at an expected future value for the response variable (`Time < 2 hours`).
+
+This is a pretty flimsy model and very small dataset, so the result is a nonsense, but it might look interesting when visualised.
+
+First, some data wrangling to ensure we can create a model from the data set.
+
+Some assumptions that have informed this:
+
+-   The men's times are (on average) faster than the women's times, so only fit the model to the men's data.
+
+-   Trim out the data after 2020, which is less consistent.
+
+```{r}
+#| label: ana-shape
+
+winners %>%
+  filter((Category == "Men") & (Year < 2020)) %>%
+  select(Year, Time) %>%
+  mutate(
+    Year = Year - min(Year),   # re-base, so first year is year 0
+    Time_n = as.numeric(Time)  # can't create a linear model with a difftime variable (Time),
+                               # so create a new column with difftime converted to numeric (Time_n)
+    ) %>% 
+  distinct(Year, Time, Time_n) -> mens_winners
+
+```
+
+Now to create a linear model for the impact of each `Year` on the winner's finishing `Time`.
+
+```{r}
+#| label: ana-model
+
+lm(Time_n ~ Year, data = mens_winners) -> mens_mdl
+
+```
+
+If this were a proper model, I should assess the fit of the `mens_mdl` to the data.
+
+```{r}
+#| label: ana-fit
+
+summary(mens_mdl)
+
+```
+
+Unsurprisingly, this brief summary suggests the significance of this model is basically 0. So, not at all helpful for meaningful prediction. Nevertheless, we can now use the `mens_mdl` to predict in which year the men's winner's time will be less than two hours.
+
+```{r}
+#| label: ana-predict
+
+target_Time <- 2 * 60 * 60  # Target time of 2 hours, in seconds, for computation
+first_Year <- min(winners$Year)
+
+# A tibble with a row for each Year for which we want to predict.
+explanatory_data <- tibble(Year = max(mens_winners$Year):(max(mens_winners$Year) + 30)) # An estimate
+
+# Use the model to predict values for each row in the explanatory_data tibble.
+explanatory_data %>% 
+  mutate(Time_n = predict(mens_mdl, explanatory_data),
+         Prediction = TRUE) -> prediction_data
+
+# Filter the predicted results to find the first Year with a finish time less than the target time.
+prediction_data %>% 
+  filter(Time_n < target_Time) %>% 
+  slice_head(n = 1) %>% 
+  pull(Year) + first_Year -> tipping_Year # re-bases to use human years (eg. 2041)
+
+```
+
+And, so, to answer our research question: based on these data, we expect the magic 2:00 hr mark to be broken at the London Marathon in `r tipping_Year`.
+
+### Visualization
+
+And now, to combine the original data, the predicted data points from the model line and highlight the target time.
+
+```{r}
+#| label: vis-prep
+
+# Prepare the data for plotting
+mens_winners %>% 
+  select(-Time) %>%
+  mutate(Prediction = FALSE) %>% 
+  rbind(prediction_data) %>% 
+  mutate(Time_duration = dseconds(Time_n),
+         Year = Year + first_Year) -> plotting_data
+
+plotting_data %>% 
+  filter(Year == tipping_Year) -> tipping_point
+
+```
+
+And finally, the plot:
+
+```{r}
+#| label: vis
+#| fig-cap: "When will the first sub-2 hour London Marathon winner be?"
+#| message: false
+
+ggplot(data = plotting_data, aes(x = Year, y = Time_n)) +
+  geom_smooth(method = "lm", se = FALSE, linewidth = 0.5, alpha = 0.9) +
+  geom_point(aes(color = Prediction)) +
+  geom_hline(aes(yintercept = target_Time), linetype = "dashed", color = "darkgrey") +
+  geom_vline(aes(xintercept = tipping_Year), linetype = "dashed", color = "darkgrey") +
+  geom_point(data = tipping_point, color = "black")
+
+```
+
+```{r}
+#| label: pack-up-env
+#| echo: false
+
+rm(winners)
+rm(london_marathon)
+rm(mens_winners)
+rm(target_Time)
+rm(mens_mdl)
+rm(explanatory_data)
+rm(prediction_data)
+rm(plotting_data)
+rm(first_Year)
+rm(tipping_Year)
+rm(tipping_point)
+
+```
+
+## Appendices
+
+### Session Info
+
+```{r}
+#| label: app-session-info
+#| echo: false
+
+sessionInfo()
+
+```
+
+### Changelog
+
+2023-09-26 1.0 Initial version.
+
+### References

@@ -1,0 +1,28 @@
+---
+title: "About"
+about:
+  template: marquee
+bibliography: about.bib
+---
+
+This blog documents my learning journey through statistics, data science and web development, using open source software. It is partly inspired by Dave Robinson's talk on the [unreasonable effectiveness of working in the open](https://posit.co/resources/videos/the-unreasonable-effectiveness-of-public-work/) [@Robinson2019] and partly inspired by wanting things I've done to be in one place.
+
+Blogging is a fun, creative outlet for me. I have no formal training with these tools or techniques and it is not how I make a living. I try to be rigorous -- citing sources, sharing data and documenting my work to make it reproducible -- but I bring the amateur's expertise, accuracy and timeliness.
+
+My interest in data and statistical computing was sparked by a Masters module on research methods and the hype around data science. You can expect to read about my current projects:
+
+-   teaching myself statistical concepts with [Datacamp](http://www.datacamp.com), using [R](https://www.r-project.org) for the computation and visualisation;
+
+-   exercising my data analysis and visualisation skills in R, including through participating in [Tidy Tuesday](https://www.tidytuesday.com) and the [R4DS community](https://rfordatasci.com);
+
+-   building and deploying a basic [Django](https://www.djangoproject.com) application, with [python](https://www.python.org) and [postgresql](https://www.postgresql.org), including software development concepts like testing, and version control with [git](https://git-scm.com); and
+
+-   writing this blog with [Quarto](https://quarto.org).
+
+Also expect a sprinkling of content about my other hobbies, including photography, coffee, food and riding bicycles.
+
+The title is a play on _evidence-based policy_, "a concept in public policy that advocates for policy decisions to be grounded on, or influenced by, rigorously established objective evidence" [@enwiki]. Though the topics covered are not public policy issues, the title reflects that many of the tools and techniques covered here could be used for collecting and analysing evidence to inform public policy.
+
+I should also make clear that nothing here is informed by the work do as an employee. All views expressed here are my own and do not represent those of my employer.
+
+## References

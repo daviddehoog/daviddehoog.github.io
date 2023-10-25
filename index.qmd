@@ -1,0 +1,13 @@
+---
+title: "Latest Posts"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  date-format: "D MMMM YYYY"
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
