@@ -1,0 +1,4 @@
+baseURL = 'https://daviddehoog.github.io'
+languageCode = 'en-au'
+title = 'daviddehoog.github.io'
+theme = 'ananke'
