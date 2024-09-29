@@ -15,4 +15,6 @@ For the reasons set out aboce, this is not a high-tech website.
   - building my own a custom Hugo theme
   - adding an RSS feed
 
+Possible future content is included as [Issues](https://github.com/daviddehoog/daviddehoog.github.io/issues) in [the site’s GitHub repository](https://github.com/daviddehoog/daviddehoog.github.io).
+
   ### Git workflow

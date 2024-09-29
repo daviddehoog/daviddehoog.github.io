@@ -6,12 +6,26 @@
     <description>Recent content on daviddehoog.github.io</description>
     <generator>Hugo</generator>
     <language>en-au</language>
-    <lastBuildDate>Wed, 25 Sep 2024 00:06:17 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2024 00:06:17 +1000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This site</title>
+      <link>http://localhost:1313/posts/this-site/</link>
+      <pubDate>Sun, 29 Sep 2024 00:06:17 +1000</pubDate>
+      <guid>http://localhost:1313/posts/this-site/</guid>
+      <description>&lt;h2 id=&#34;the-site---plumbing&#34;&gt;The site - plumbing&lt;/h2&gt;&#xA;&lt;p&gt;For the reasons set out aboce, this is not a high-tech website.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Uses the Hugo static site generator (written in Go). Hugo takes markdown files and rolls them into HTML, CSS (and JS). It uses the (default) ananke theme to give the sites files a consistent look and feel. Link to Hugo documentation.&lt;/li&gt;&#xA;&lt;li&gt;The source files and the resulting website files are under version control with git, and synchronised with GitHub. Each time the main branch changes, a GitHub Action re-builds the site using the new content.&lt;/li&gt;&#xA;&lt;li&gt;The resulting static website is about 600 kilobytes and is deployed to and served by a GitHub webserver.&lt;/li&gt;&#xA;&lt;li&gt;Future possible features include:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;linting of the HTML and CSS output files, as part of the GitHub action&lt;/li&gt;&#xA;&lt;li&gt;ensuring the website is accessible (WCAG2.2 compliance)&lt;/li&gt;&#xA;&lt;li&gt;building my own a custom Hugo theme&lt;/li&gt;&#xA;&lt;li&gt;adding an RSS feed&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Possible future content is included as &lt;a href=&#34;https://github.com/daviddehoog/daviddehoog.github.io/issues&#34;&gt;Issues&lt;/a&gt; in &lt;a href=&#34;https://github.com/daviddehoog/daviddehoog.github.io&#34;&gt;the site’s GitHub repository&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>about</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 28 Sep 2024 00:06:17 +1000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;me&#34;&gt;me&lt;/h2&gt;&#xA;&lt;p&gt;I’m a middle-aged bureaucrat living in &lt;a href=&#34;https://en.wikipedia.org/wiki/Canberra?uselang=en&#34;&gt;Canberra&lt;/a&gt;, Australia.&lt;/p&gt;&#xA;&lt;p&gt;I enjoy cooking the seasons, riding bicycles, swimming and hiking and, when I can get away, travel - taking photographs, exploring cultures and food and drink. I dabble in statistics, data science and web application development - predominantly using open source software.&lt;/p&gt;&#xA;&lt;p&gt;I am trying to get into gardening. The pall of DIY projects casts a shadow over my future weekends.&lt;/p&gt;&#xA;&lt;p&gt;The site is intended to be a fun, creative outlet for me. I have no formal training with these tools, nor is it how I make a living, so I bring the amateur’s expertise, accuracy and timeliness.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>bear export test</title>
       <link>http://localhost:1313/posts/bear-export-test/</link>
-      <pubDate>Wed, 25 Sep 2024 00:06:17 +1000</pubDate>
+      <pubDate>Thu, 26 Sep 2024 00:06:17 +1000</pubDate>
       <guid>http://localhost:1313/posts/bear-export-test/</guid>
       <description>&lt;p&gt;Installed with brew. Version: hugo v0.134.3+extended darwin/amd64 BuildDate=2024-09-19T14:28:20Z VendorInfo=brew&lt;/p&gt;&#xA;&lt;p&gt;Located in ~/daviddehoog.github.io&lt;/p&gt;&#xA;&lt;p&gt;Deployed to GitHub pages, following tutorial: &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;https://gohugo.io/hosting-and-deployment/hosting-on-github/&lt;/a&gt;. Set up Github Action to re-build on each push to main.&lt;/p&gt;</description>
     </item>
