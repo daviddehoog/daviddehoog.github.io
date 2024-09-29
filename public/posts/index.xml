@@ -6,12 +6,19 @@
     <description>Recent content in Posts on daviddehoog.github.io</description>
     <generator>Hugo</generator>
     <language>en-au</language>
-    <lastBuildDate>Wed, 25 Sep 2024 00:06:17 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2024 00:06:17 +1000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This site</title>
+      <link>http://localhost:1313/posts/this-site/</link>
+      <pubDate>Sun, 29 Sep 2024 00:06:17 +1000</pubDate>
+      <guid>http://localhost:1313/posts/this-site/</guid>
+      <description>&lt;h2 id=&#34;the-site---plumbing&#34;&gt;The site - plumbing&lt;/h2&gt;&#xA;&lt;p&gt;For the reasons set out aboce, this is not a high-tech website.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Uses the Hugo static site generator (written in Go). Hugo takes markdown files and rolls them into HTML, CSS (and JS). It uses the (default) ananke theme to give the sites files a consistent look and feel. Link to Hugo documentation.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The source files and the resulting website files are under version control with git, and synchronised with GitHub. Each time the main branch changes, a GitHub Action re-builds the site using the new content.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>bear export test</title>
       <link>http://localhost:1313/posts/bear-export-test/</link>
-      <pubDate>Wed, 25 Sep 2024 00:06:17 +1000</pubDate>
+      <pubDate>Thu, 26 Sep 2024 00:06:17 +1000</pubDate>
       <guid>http://localhost:1313/posts/bear-export-test/</guid>
       <description>&lt;p&gt;Installed with brew. Version: hugo v0.134.3+extended darwin/amd64 BuildDate=2024-09-19T14:28:20Z VendorInfo=brew&lt;/p&gt;&#xA;&lt;p&gt;Located in ~/daviddehoog.github.io&lt;/p&gt;&#xA;&lt;p&gt;Deployed to GitHub pages, following tutorial: &lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;https://gohugo.io/hosting-and-deployment/hosting-on-github/&lt;/a&gt;. Set up Github Action to re-build on each push to main.&lt;/p&gt;</description>
     </item>
