@@ -5,16 +5,20 @@ draft = false
 +++
 
 ## The site - plumbing
-For the reasons set out aboce, this is not a high-tech website.  
-- Uses the Hugo static site generator (written in Go). Hugo takes markdown files and rolls them into HTML, CSS (and JS). It uses the (default) ananke theme to give the sites files a consistent look and feel. Link to Hugo documentation.
-- The source files and the resulting website files are under version control with git, and synchronised with GitHub. Each time the main branch changes, a GitHub Action re-builds the site using the new content.
-- The resulting static website is about 600 kilobytes and is deployed to and served by a GitHub webserver.
-- Future possible features include:
-  - linting of the HTML and CSS output files, as part of the GitHub action
-  - ensuring the website is accessible (WCAG2.2 compliance)
-  - building my own a custom Hugo theme
-  - adding an RSS feed
 
-Possible future content is included as [Issues](https://github.com/daviddehoog/daviddehoog.github.io/issues) in [the site’s GitHub repository](https://github.com/daviddehoog/daviddehoog.github.io).
+This is a relatively simple web site.
 
-  ### Git workflow
+The site uses a static site generator, [Hugo](https://gohugo.io), to roll markdown files I have written into HTML, CSS (and JavaScript). The (default) ananke theme gives the files a consistent look and feel. The [Hugo documentation](https://gohugo.io/documentation/) has been very helpful for a new starter.
+
+The content files and the [resulting website](http://daviddehoog.github.io) files are under version control with [git](https://git-scm.com), and synchronised with [GitHub](https://github.com). The site is actually built with [GitHub Actions](https://github.com/features/actions) and served by [GitHub Pages](https://pages.github.com).
+
+Most content is written in [markdown](https://www.markdownguide.org), often on my phone or tablet on [Bear](https://bear.app) in quieter moments. I use [Visual Studio Code](https://code.visualstudio.com) to edit longer posts and to adjust Hugo configuration and template files.
+
+The site's code is available in [the site’s GitHub repository](https://github.com/daviddehoog/daviddehoog.github.io). Possible future content is included as [Issues](https://github.com/daviddehoog/daviddehoog.github.io/issues).
+
+### Git workflow
+
+Write content and add to main, fresh commit.
+
+New site feautres are a branch - eg one branch per issue - then are tested and merged into main.Daily save as WIP.  Squash commits on a branch before merging into main and deploying.
+
