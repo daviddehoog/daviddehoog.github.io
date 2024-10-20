@@ -3,6 +3,10 @@ languageCode = 'en-au'
 title = 'daviddehoog.github.io'
 theme = 'ananke'
 
+[taxonomies]
+    topic = 'topics'
+    status = 'status'
+
 sectionPagesMenu = 'main'
 
 [params]
