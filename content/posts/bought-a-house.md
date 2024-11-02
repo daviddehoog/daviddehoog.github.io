@@ -2,12 +2,14 @@
 title = 'bought a house'
 date = 2024-10-06T00:11:17+11:00
 draft = false
-type = 'waypoint'
+status = ['proofing']
+type = ['waypoint']
+
 +++
 
 ## 2024 Winter
 
-So, after renting accommodation for close to 20 years, I bought somewhere to live. (_Technically_, I bought half of a 100 year lease on one part of a multi-unit plan, with another person and a bank.) This still feels like a notable waypoint on life's journey.
+So, after renting accommodation for close to 20 years, I bought somewhere to live. (_Technically_, I bought half of a 99 year lease on one part of a multi-unit plan, with another person and a bank.) This still feels like a notable waypoint on life's journey.
 
 <!--more-->
 

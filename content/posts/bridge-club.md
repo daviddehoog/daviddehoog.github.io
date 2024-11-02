@@ -6,9 +6,7 @@ topics = ['bikes']
 status = ['incomplete']
 +++
 
-## 'Ollie'
-
-'Ollie' is my Surly Bridge Club. My 'go anywhere, do anything' bike. Slow and steady, but flexible and functional.
+'Ollie' is my Surly Bridge Club. My 'go anywhere, do anything' bike. Slow and steady, but adaptable to lots of functions.
 
 The steel frame, wide clearance for tyres on 27.5" rims and multiple mounting points make it ideal for bikepacking. It can also run narrower tyres on 700cc rims, as a rock solid utility bike.
 
