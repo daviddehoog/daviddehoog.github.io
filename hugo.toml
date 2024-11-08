@@ -9,5 +9,12 @@ theme = 'ananke'
 
 sectionPagesMenu = 'main'
 
+[menus]
+    [[menus.main]]
+        name = 'timeline'
+        pageRef = '/timeline'
+        weight = 20
+
 [params]
     mainSections = ['posts']
+    custom_css = ['timeline.css']
