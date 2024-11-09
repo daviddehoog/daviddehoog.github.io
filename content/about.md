@@ -18,7 +18,7 @@ The site is intended to be a fun, creative outlet for me. I have no formal train
 
 The site’s content is an erratically-assembled smorgasbord, featuring my hobbies, thoughts on other content that interests me, daily life with the occasional rant served on the side. 
 
-<!-- _I provide sporadic updates at key waypoints on [the journey]({{ ref "/journey/" }})._ */}} -->
+I provide sporadic updates at key waypoints on [the journey]({{< ref "/journey" >}}).
 
 I should also make clear that nothing here is informed by the work do as an employee and is done in my own time. All views expressed here are my own and do not represent those of my employer.
 
