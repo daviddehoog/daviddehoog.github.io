@@ -1,13 +1,13 @@
-  <div class="flex flex-column pa4 gray overflow-hidden">
+  <div class="pa3 gray overflow-hidden">
     <div class="flex flex-row justify-left pa2">
-      {{with .Params.when }}<h5 class="f5 gray">{{ . }}</h5>{{end}}
+      {{with .Params.when }}<h5 class="gray">{{ . }}</h5>{{end}}
       <h1 class="near-black">
         <a href="{{ .RelPermalink }}" class="link black dim">
          {{ .Title }}
         </a>
       </h1>
     </div>
-    <div class="nested-links f5">
+    <div class="nested-links">
       {{ .Summary }}
     </div>
   </div>

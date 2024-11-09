@@ -5,15 +5,25 @@
       {{- .Content -}}
     </section>
 
-    <section class="flex justify-around mt5 debug">
-      <ul class="timeline-ul">
+    <section class="mt5">
+      <ul class="timeline-ul debug"> 
         {{ range (.Paginator.Pages.ByParam "when").Reverse }}
-            <li class="timeline-li">
-              <div class="w-100 w-70-l mb2 mt2 bg-white tc">
-                {{ .Render "summary-timeline" }}
+          <li class="timeline-li">
+            {{with .Params.when }}<h3 class="timeline-floater">{{ . }}</h3>{{end}}</div>
+            <div class="w-100 w-70-l mb2 mt2 bg-white tc pa2">
+              <div class="pa3 gray overflow-hidden">
+                <h1 class="near-black tl pl3">
+                  <a href="{{ .RelPermalink }}" class="link black dim">
+                    {{ .Title }}
+                  </a>
+                </h1>
               </div>
-            </li>
-          </div>
+              <div class="gray nested-links">
+                {{ .Summary }}
+              </div>
+             <!-- {{ .Render "summary-timeline" }} -->
+            </div>
+          </li>
         {{ end }}
       </ul>
     </section>
