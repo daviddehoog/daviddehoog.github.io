@@ -16,7 +16,7 @@ Chop chillies or capsicum, some onion and garlic, cover with a brine solution an
 
 One day, I'll be able to make a hot sauce like this using produce from the [garden]({{< ref "/topics/garden" >}}).
 
-## 2 November 2024
+## First attempt: 2 November 2024
 
 We do like some heat, but since this is a first attempt, this one is very much on the mild side.
 
@@ -34,6 +34,11 @@ We do like some heat, but since this is a first attempt, this one is very much o
 
 - 450ml 3% brine (approx. 13.5g salt dissolved)
 
-_2024-11-02_: Started fermentation.
+### Notes
 
+_2024-11-02_: Started fermentation. Stored in a cupboard with the door closed, sitting in a small plastic container slightly larger than the jar. Just in case.
+
+_2024-11-06_: Definite signs of fermentation (brine going cloudy, bubbles). Scooped a few pieces of vegetables floating on the surface, because the glass fermentation weight slipped down into the jar and let them float up. Next time, I wouldn't chop the vegetables so finely. I would also make sure to really fill the jar with ingredients in the expectation that they will compress down a bit as they ferment.
+
+_2024-11-09_: Done. As a first hot sauce ferment, decided to call time after a week. Decanted solids and liquid into a glass bowl, blitzed with a stick blender and returned to the rinsed jar. It's quite spicy and very tasty, but it's very runny and not reeally combined as a sauce. Next time, I would leave it to ferment for longer, to help the onion flavour mellow. I also wouldn't blend in as much of the brine and I would use a food processor better suited to emulsifiying food into liquids. Nevertheless, it's now in the fridge (with the lid of the jar slightly loosened in case of further energetic fermentation), to slow fermentation but allow it to continue to mature. I will likely decant the large jar into two or three smaller ones and give some away. 
 
