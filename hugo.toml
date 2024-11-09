@@ -11,8 +11,8 @@ sectionPagesMenu = 'main'
 
 [menus]
     [[menus.main]]
-        name = 'timeline'
-        pageRef = '/timeline'
+        name = 'journey'
+        pageRef = '/journey'
         weight = 20
 
 [params]

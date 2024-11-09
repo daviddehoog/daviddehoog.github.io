@@ -2,17 +2,11 @@
     display: flex;
     flex-direction: column;
     list-style: circle;
-    background-color: lightblue;
-    padding-left: 50%;
-}
-
-.timeline-box {
-    border: solid 0px magenta;
+    padding-left: 20%;
 }
 
 .timeline-li {
     border-left: 3px solid #000;
-    background-color: darkgray;
     display: inline-flex;
     position: relative;
     padding-left: 10px;
