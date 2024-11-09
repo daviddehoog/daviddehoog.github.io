@@ -8,7 +8,7 @@ status = ['proofing']
 type = ['waypoint']
 +++
 
-So, after renting accommodation for close to 20 years, I bought somewhere to live. (_Technically_, I bought half of a 99 year lease on one part of a multi-unit plan, with another person and a bank.) This still feels like a notable waypoint on life's journey.
+So, after renting accommodation for close to 20 years, I bought somewhere to live. (_Technically_, I bought half of a 99 year lease on one part of a multi-unit plan, with another person and a bank.)
 
 <!--more-->
 

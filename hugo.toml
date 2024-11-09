@@ -17,3 +17,4 @@ sectionPagesMenu = 'main'
 
 [params]
     mainSections = ['posts']
+    custom_css = ['timeline.css']
