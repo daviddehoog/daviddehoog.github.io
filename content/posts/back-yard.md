@@ -6,7 +6,7 @@ status = ['stub']
 topics = ['garden']
 +++
 
-One of the novelties of the [house]({{< ref "/posts/bought-a-house" >}}) is that it has a back yard, with some garden beds, some lawn and an outdoor space - not just a concrete balcony space. 
+One of the novelties of the [house]({{< ref "/journey/bought-a-house" >}}) is that it has a back yard, with some garden beds, some lawn and an outdoor space - not just a concrete balcony space. 
 
 I am already spending more time in the back yard than I ever did on the balcony and we haven't even started thinking about improvements. There are some tomato plants to tend, a couple of trees to water, cobwebs to sweep, a lawn to weed and mow - plus a family of European wasps I keep trying to evict.
 

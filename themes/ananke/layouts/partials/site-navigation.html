@@ -20,6 +20,15 @@
           {{ end }}
         </ul>
       {{ end }}
+      {{ if hugo.IsDevelopment }}
+        <ul class="pr0 ml3 pl0 mr3">
+          <li class="list f5 f4-ns fw4 dib pl3 pr3">
+            <a class="hover-white no-underline red" href="/status/">
+              WRITE
+            </a>
+          </li>
+        </ul>
+      {{ end }}
       {{ partialCached "social-follow.html" . }}
     </div>
   </div>

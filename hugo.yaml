@@ -1,0 +1,23 @@
+baseURL: https://daviddehoog.github.io
+languageCode: en-au
+title: daviddehoog.github.io
+titleCaseStyle: none
+theme: ananke
+
+taxonomies:
+    topic: topics
+    status: status
+
+sectionPagesMenu: main
+
+menus:
+    main:
+        - name: journey
+          pageRef: '/journey'
+          weight: 20
+
+params:
+    mainSections:
+        - posts
+    custom_css:
+        - timeline.css
