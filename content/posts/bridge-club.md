@@ -1,10 +1,10 @@
-+++
-title = 'bridge club'
-date = 2024-10-09T00:06:17+10:00
-draft = false
-topics = ['bikes']
-status = ['incomplete']
-+++
+---
+title: 'bridge club'
+date: 2024-10-09T00:06:17+10:00
+draft: false
+topics: 'bikes'
+status: 'incomplete'
+---
 
 'Ollie' is my Surly Bridge Club. My 'go anywhere, do anything' bike. Slow and steady, but adaptable to lots of functions.
 

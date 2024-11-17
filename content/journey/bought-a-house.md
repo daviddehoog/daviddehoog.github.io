@@ -1,12 +1,12 @@
-+++
-title = 'bought a house'
-[params]
-    when = '2024 Winter'
-date = 2024-10-06T00:11:17+11:00
-draft = false
-status = ['proofing']
-type = ['waypoint']
-+++
+---
+title: 'bought a house'
+params:
+    when: '2024 Winter'
+date: 2024-10-06T00:11:17+11:00
+draft: false
+status: 'proofing'
+type: 'waypoint'
+---
 
 So, after renting accommodation for close to 20 years, I bought somewhere to live. (_Technically_, I bought half of a 99 year lease on one part of a multi-unit plan, with another person and a bank.)
 

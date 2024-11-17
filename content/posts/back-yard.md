@@ -1,10 +1,10 @@
-+++
-title = 'back yard'
-date = 2024-11-03T00:06:17+10:00
-draft = false
-status = ['incomplete']
-topics = ['garden']
-+++
+---
+title: 'back yard'
+date: 2024-11-03T00:06:17+10:00
+draft: false
+status: 'incomplete'
+topics: 'garden'
+---
 
 One of the novelties of the [house]({{< ref "/journey/bought-a-house" >}}) is that it has a back yard, with some garden beds, some lawn and an outdoor space - not just a concrete balcony space. 
 

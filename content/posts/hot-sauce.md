@@ -1,10 +1,10 @@
-+++
-title = 'hot sauce'
-date = 2024-11-02T00:14:01+11:00
-draft = false
-topics = ['fermentation']
-status = ['incomplete']
-+++
+---
+title: 'hot sauce'
+date: 2024-11-02T00:14:01+11:00
+draft: false
+topics: 'fermentation'
+status: 'incomplete'
+---
 
 We have been looking for more condiments to add flavour to our meals. A special offer at the local market presented an opportunity to try fermenting a hot sauce.
 

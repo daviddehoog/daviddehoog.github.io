@@ -1,10 +1,10 @@
-+++
-title = 'food waste'
-date = 2024-10-20T00:14:01+11:00
-draft = false
-topics = ['garden']
-status = ['incomplete']
-+++
+---
+title: 'food waste'
+date: 2024-10-20T00:14:01+11:00
+draft: false
+topics: 'garden'
+status: 'incomplete'
+---
 
 It makes sense for us to try to do something with our food waste, to reduce how much of it goes to landfill. We also want to plant a garden around the new house, so we have started to think about how we can build up and improve the soil.
 

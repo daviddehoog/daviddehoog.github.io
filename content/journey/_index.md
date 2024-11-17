@@ -1,9 +1,9 @@
-+++
-title = 'journey'
-description = 'key events'
-type = 'page'
-layout = 'timeline'
-+++
+---
+title: 'journey'
+description: 'key events'
+type: 'page'
+layout: 'timeline'
+---
 
 ## life's journey
 

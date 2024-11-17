@@ -1,10 +1,10 @@
-+++
-title = 'the site'
-date = 2024-09-29T00:06:17+10:00
-draft = false
-topics = ['workflow']
-status = ['reviewing']
-+++
+---
+title: 'the site'
+date: 2024-09-29T00:06:17+10:00
+draft: false
+topics: 'workflow'
+status: 'reviewing'
+---
 
 By design, this is quite a simple web site.
 

@@ -1,10 +1,10 @@
-+++
-title = 'about'
-date = 2024-09-28T00:06:17+10:00
-draft = false
-menus = 'main'
-type = 'page'
-+++
+---
+title: 'about'
+date: 2024-09-28T00:06:17+10:00
+draft: false
+menus: 'main'
+type: 'page'
+---
 
 ## me
 
