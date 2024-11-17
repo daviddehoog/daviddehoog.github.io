@@ -2,7 +2,7 @@
 title = 'back yard'
 date = 2024-11-03T00:06:17+10:00
 draft = false
-status = ['stub']
+status = ['incomplete']
 topics = ['garden']
 +++
 

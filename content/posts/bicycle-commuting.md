@@ -3,7 +3,7 @@ title = 'bicycle commuting'
 date = 2024-10-09T00:06:17+10:00
 draft = true
 topics = ['bikes']
-status = ['incomplete']
+status = ['stub']
 +++
 
 ## bicycle commuting

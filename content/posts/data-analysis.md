@@ -2,7 +2,7 @@
 title = 'data'
 date = 2024-09-29T00:06:17+10:00
 draft = true
-status = ['stub']
+status = ['incomplete']
 +++
 
 A post about how I got into data and data analysis.
