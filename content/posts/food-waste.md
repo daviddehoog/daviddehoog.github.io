@@ -32,6 +32,8 @@ _2024-10-29_: After a few days of layering bokashi with bran and food scraps, it
 
 _2024-11-02_: The bokashi has been undisturbed for a few days in case we had given it indigestion. The almost full bucket is now much less full. There's lots of moisure inside the container, and lots of what looks like white mould on the top on the waste. Exposed bran bits on the top look like they have grown quite a bit, possibly even little mushrooms. There's not a particularly strong smell, but it doesn't look appealing. While I'm sceptical, those are apparently [quite good signs](https://bokashiliving.com/successful-bokashi-bin-look-like). The third sign to check is whether there is waste liquid being produced. I'll look at that tomorrow ...
 
+_2025-04-08_: The bokashi went south and has been residing the back yard for some time. It's currently on hold.
+
 # what this looks like for us
 
 For us, this means having a plastic box with a flip top lid that sits under the sink. **(What is the volume and dimensions of our bokashi buckets?)** As we’re preparing food we collect it in one place, and then as we clean up, we put food scraps into the box. (We discard anything that has mould on it or is already rotting, because it might upset the balance of bacteria.) At the end of each day we add some bokashi bacteria-innoculated rice bran to the top of the box to add more good bacteria and yeasts, then press the contents down with a ‘masher’ to remove as much as air as possible. (We buy commercially-innoculated bokashi bran to add to our bokashi bins.)

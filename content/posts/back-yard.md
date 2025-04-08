@@ -28,4 +28,18 @@ The remaining part of the back yard is adjacent to the house, accessed through s
 
 ## plans
 
-We are certainly going to have to do something about the soil quality.
+For the first area, we'll need to plant some hedges to give us some privacy. The soil looks like it will need a bit of building up and we'll likely need an automated watering system of some description, using the already-installed water tank.
+
+We have ambitions to establish some vegetable gardens, probably on the second area. The exact form and shape of these is to be worked out, but they will probably need to be raised beds. For now, there are some small raised beds (from our previous balcony) and a [compost bin]({{< ref "/posts/food-waste" >}}).
+
+The lawn is probably going to stay lawn - probably.
+
+We are also likely to need a pergola to create a covered outdoors space, a shed of some sort, and ideally a gate to access the back yard.
+
+## back lawn
+
+On the topic of lawn, the back lawn has certainly been struggling a bit. To be fair, after an initial period of prodding at the lawn occasionally, it had a period of lengthy neglect during a busy period including leaving town over Christmas and some delays while necessary tools (like a lawnmower) were acquired. The weeds largely took over during this lull and some hot weather also tested the lawn. (The main weeds were X and Y).
+
+So began a burst of weeding in February and March 2025. By late-March 2025, the result was a lawn without too many weeds but plenty of bare patches. It's also evident that the lawn that is shaded by the fence for much of the day is growing much more quickly than the lawn in full sun for most of the day. After a mow (with the new mower), it became clear that the soil underneath all the lawn was basically just clay, so a pair of 'lawn aeration sandals', 2 bags of gypsum were acquired and distributed with help from a visitor (AH). Then, A LOT of water later, the lawn was left to rest overnight, before applying some (awful) 'weed and feed' to help it along.
+
+I disappeared for a couple of weeks and came back in early April 2025 to find the lawn still very patchy - but largely free of weeds - and the soil still very clay-like but, in some parts, decidedly better at retaining moisture. After a quick weed, earlier, the plan from here is to aerate again (this time with a garden fork - the sandals were worth all $AU 8.00), work some more soil improver into parts of the lawn, then wet it in. The following day I'll mow the lawn, then top dress, re-seed and fertilize the gaps.
