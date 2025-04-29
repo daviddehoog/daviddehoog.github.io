@@ -43,3 +43,13 @@ On the topic of lawn, the back lawn has certainly been struggling a bit. To be f
 So began a burst of weeding in February and March 2025. By late-March 2025, the result was a lawn without too many weeds but plenty of bare patches. It's also evident that the lawn that is shaded by the fence for much of the day is growing much more quickly than the lawn in full sun for most of the day. After a mow (with the new mower), it became clear that the soil underneath all the lawn was basically just clay, so a pair of 'lawn aeration sandals', 2 bags of gypsum were acquired and distributed with help from a visitor (AH). Then, A LOT of water later, the lawn was left to rest overnight, before applying some (awful) 'weed and feed' to help it along.
 
 I disappeared for a couple of weeks and came back in early April 2025 to find the lawn still very patchy - but largely free of weeds - and the soil still very clay-like but, in some parts, decidedly better at retaining moisture. After a quick weed, earlier, the plan from here is to aerate again (this time with a garden fork - the sandals were worth all $AU 8.00), work some more soil improver into parts of the lawn, then wet it in. The following day I'll mow the lawn, then top dress, re-seed and fertilize the gaps.
+
+2025-04-10 The lawn was mowed.
+
+2025-04-12 Top dreasing applied, seeded, fertilizer and watered.
+
+lots of watering ...
+
+2025-04-21 It rained for the first time in quite some time. A tot of about 10mm in 24 hours.
+
+2025-04-22 The first sign of sprouting seed in the lawn.
