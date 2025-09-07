@@ -53,3 +53,13 @@ lots of watering ...
 2025-04-21 It rained for the first time in quite some time. A tot of about 10mm in 24 hours.
 
 2025-04-22 The first sign of sprouting seed in the lawn.
+
+2025-08-30 The lawn was mowed, as it started to put on a growth spurt for the start of Spring. Quite a few of the seeds sown in Autumn have taken and needed a trim. The lawn nearest the tree is looking a bit dry and dead.
+
+## back hedge and fence
+
+We can see over our back fence into a neighbouring complex and probably both overlook one another. So we need a hedge to gently screen the view.
+
+The back fence was 
+
+One, lone pitosrporum stands in the middle at the back of the yard, with a small patch of earth retained by a 30cm sandatone wall.
