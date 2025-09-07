@@ -60,6 +60,10 @@ lots of watering ...
 
 We can see over our back fence into a neighbouring complex and probably both overlook one another. So we need a hedge to gently screen the view.
 
-The back fence was 
+The back fence is a bit older than the other two fences. It is also facing the other property, so the supporting posts and beams are on our side. It hadnt had much attention, but was in fair shape.
 
-One, lone pitosrporum stands in the middle at the back of the yard, with a small patch of earth retained by a 30cm sandatone wall.
+One, lone pitosrporum stands in the middle at the back of the yard, with a small patch of earth retained by a 30cm sandstone wall. Six or seven more would provide coverage in a hedge across the back.
+
+After digging out the earth at the bottom if the fence, we painted the fence in Woodland Grey. this matches the colour used on parts of the house and the house behind. it is darker than the foliage we're hoping to grow in front of it, ao hopefully that will help it to fade into the background. the capping along the top of the fenxe is a stark white. That might stay - or it might change in future. 
+
+the other challenge is now that painting has begun, there seem to be lots more things that could be painted: Another, shorter north-facing fenxe; a much longer, south-facing fenxe, some edging, etc. Maybe we'll end up with a light-coloured feature wall facing North and a couple or interesting panels on the long, south-facing fence line.
