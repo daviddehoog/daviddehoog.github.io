@@ -8,9 +8,21 @@ status: 'incomplete'
 
 It makes sense for us to try to do something with our food waste, to reduce how much of it goes to landfill. We also want to plant a garden around the new house, so we have started to think about how we can build up and improve the soil.
 
-Those are a couple of the reasons why we have recently re-started our bokashi bin.
+Those are a couple of the reasons why we have recently re-started our composting efforts.
 
 <!--more-->
+
+We started with a bokashi bin, but that experiment didn't quite work out - probably because our bokashi-innoculated product was too old. But, we've invested in a larger, barrel compost bin instead.
+
+# compost barrel
+
+(ABOUT composting) - browns, greens, and r/composting.
+
+_early-March 2025_: Set up barrel composter. It's in full sun, sitting on tambark, so it must get pretty warm.
+
+Added lots of food waste progressively, and fully opened the vents. Has also had one of grass clippings.
+
+_early-April_: Lots of flies - combination of fruit flies and sand flies - looks like mixture is too wet, despite best efforts to add in more 'browns'. Hopefully with Autumn temperatures and leave dropping, there will soon be some more brown materials to add in.
 
 # bokashi
 
