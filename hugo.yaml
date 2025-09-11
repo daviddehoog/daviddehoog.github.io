@@ -2,7 +2,11 @@ baseURL: https://daviddehoog.github.io
 languageCode: en-au
 title: daviddehoog.github.io
 titleCaseStyle: none
-theme: ananke
+
+module:
+    imports:
+        - path: "github.com/discaptive/hugo-discaptive"
+theme: hugo-discaptive
 
 taxonomies:
     topic: topics

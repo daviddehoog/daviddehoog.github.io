@@ -10,4 +10,4 @@ type: 'waypoint'
 
 <!--more-->
 
-Read more about [Canberra]({{< ref "/posts/canberra" >}}).
+Read more about Canberra.

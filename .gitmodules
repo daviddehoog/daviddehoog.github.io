@@ -1,3 +1,6 @@
 [submodule "themes/hugo_theme_windy"]
 	path = themes/hugo_theme_windy
 	url = https://github.com/zEttOn86/hugo_theme_windy.git
+[submodule "themes/hugo-discaptive"]
+	path = themes/hugo-discaptive
+	url = https://github.com/discaptive/hugo-discaptive.git

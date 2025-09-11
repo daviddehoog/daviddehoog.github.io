@@ -12,7 +12,7 @@ I’m a middle-aged bureaucrat living in [Canberra](https://en.wikipedia.org/wik
 
 I enjoy cooking the seasons, riding bicycles, swimming and hiking and, when I can get away, travel - taking photographs, exploring cultures and food and drink. I dabble in statistics, data science and web application development - predominantly using open source software.
 
-I am trying to get into designing and tending a [garden]({{< ref "/topics/garden" >}}). The pall of DIY projects casts a shadow over my future weekends.
+I am trying to get into designing and tending a garden. The pall of DIY projects casts a shadow over my future weekends.
 
 The site is intended to be a fun, creative outlet for me. I have no formal training with these tools, nor is it how I make a living, so I bring the amateur’s expertise, accuracy and timeliness.
 
@@ -34,4 +34,4 @@ Content will go on the site in whatever state is convenient for me - which inclu
 
 There will be no logging in. There will be no advertising. There might be a cookie or two, but something basic to support limited JavaScript, if needed to do something nifty.
 
-I have posted about the [tools, design and workflows used to create the site]({{< ref "/posts/this-site/" >}}).
+I have posted about the tools, design and workflows used to create the site.
