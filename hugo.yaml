@@ -23,5 +23,5 @@ menus:
 params:
     mainSections:
         - posts
-    custom_css:
-        - timeline.css
+    #custom_css:
+    #    - timeline.css
