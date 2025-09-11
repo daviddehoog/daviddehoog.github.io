@@ -1,0 +1,26 @@
+<a class="group break-words" aria-label="{{ site.Title }}" href="/">
+  <div class="flex items-center justify-between">
+    <div class="sm:mr-3">
+      <img src="/images/logo.svg" width="32" height="32" alt="Logo Image" />
+    </div>
+
+    <div class="hidden text-2xl font-semibold sm:block group-hover:underline">
+      <span>{{ site.Title }}</span>
+    </div>
+  </div>
+</a>
+
+<div class="flex items-center space-x-4 leading-5 sm:space-x-6">
+  <div class="items-center space-x-4 overflow-x-auto flex sm:space-x-6">
+    {{ range .Site.Menus.main }}
+      <a
+        href="{{ .URL }}"
+        class="font-medium text-gray-900 hover:text-indigo-500"
+        {{ if or (hasPrefix .URL "http://") (hasPrefix .URL "https://") }}
+          target="_blank" rel="noopener noreferrer"
+        {{ end }}
+        >{{ .Name }}</a
+      >
+    {{ end }}
+  </div>
+</div>
