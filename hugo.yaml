@@ -28,8 +28,6 @@ module:
 
 theme: hugo-discaptive
 
-
-
 menus:
     main:
         - name: journey
