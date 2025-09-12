@@ -3,15 +3,27 @@ languageCode: en-au
 title: daviddehoog.github.io
 titleCaseStyle: none
 
-module.imports:
-    path: "github.com/discaptive/hugo-discaptive"
-theme: hugo-discaptive
-
 taxonomies:
     topic: topics
     status: status
 
 sectionPagesMenu: main
+
+build:
+  buildStats:
+    enable: true
+  cachebusters:
+  - source: assets/notwatching/hugo_stats\.json
+    target: css
+module:
+  imports:
+    - path: 'github.com/discaptive/hugo-discaptive'
+  mounts:
+  - source: assets
+    target: assets
+
+theme: hugo-discaptive
+
 
 menus:
     main:
