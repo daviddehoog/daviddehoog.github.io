@@ -13,16 +13,21 @@ build:
   buildStats:
     enable: true
   cachebusters:
-  - source: assets/notwatching/hugo_stats\.json
+  - source: assets/watching/hugo_stats\.json
     target: css
+
 module:
-  imports:
-    - path: 'github.com/discaptive/hugo-discaptive'
+  #imports:
+  #  - path: 'github.com/discaptive/hugo-discaptive'
   mounts:
   - source: assets
     target: assets
+  - disableWatch: true
+    source: hugo_stats\.json
+    target: assets/watching/hugo_stats\.json
 
 theme: hugo-discaptive
+
 
 
 menus:
