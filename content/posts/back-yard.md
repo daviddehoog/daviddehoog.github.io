@@ -6,7 +6,7 @@ status: 'incomplete'
 topics: 'garden'
 ---
 
-One of the novelties of the [house]({{< ref "/journey/bought-a-house" >}}) is that it has a back yard, with some garden beds, some lawn and an outdoor space - not just a concrete balcony space. 
+One of the novelties of the [house]({{< ref "/journey/bought-a-house" >}}) is that it has a back yard, with some garden beds, some lawn and an outdoor space - not just a concrete balcony space.
 
 I am already spending more time in the back yard than I ever did on the balcony and we haven't even started thinking about improvements. There are some tomato plants to tend, a couple of trees to water, cobwebs to sweep, a lawn to weed and mow - plus a family of European wasps I keep trying to evict.
 
@@ -64,6 +64,6 @@ The back fence is a bit older than the other two fences. It is also facing the o
 
 One, lone pitosrporum stands in the middle at the back of the yard, with a small patch of earth retained by a 30cm sandstone wall. Six or seven more would provide coverage in a hedge across the back.
 
-After digging out the earth at the bottom if the fence, we painted the fence in Woodland Grey. this matches the colour used on parts of the house and the house behind. it is darker than the foliage we're hoping to grow in front of it, ao hopefully that will help it to fade into the background. the capping along the top of the fenxe is a stark white. That might stay - or it might change in future. 
+After digging out the earth at the bottom if the fence, we painted the fence in Woodland Grey. this matches the colour used on parts of the house and the house behind. it is darker than the foliage we're hoping to grow in front of it, ao hopefully that will help it to fade into the background. the capping along the top of the fenxe is a stark white. That might stay - or it might change in future.
 
 the other challenge is now that painting has begun, there seem to be lots more things that could be painted: Another, shorter north-facing fenxe; a much longer, south-facing fenxe, some edging, etc. Maybe we'll end up with a light-coloured feature wall facing North and a couple or interesting panels on the long, south-facing fence line.

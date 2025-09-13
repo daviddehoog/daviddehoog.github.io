@@ -14,7 +14,7 @@ Those are a couple of the reasons why we have recently re-started our composting
 
 We started with a bokashi bin, but that experiment didn't quite work out - probably because our bokashi-innoculated product was too old. But, we've invested in a larger, barrel compost bin instead.
 
-# compost barrel
+## compost barrel
 
 (ABOUT composting) - browns, greens, and r/composting.
 
@@ -24,11 +24,12 @@ Added lots of food waste progressively, and fully opened the vents. Has also had
 
 _early-April_: Lots of flies - combination of fruit flies and sand flies - looks like mixture is too wet, despite best efforts to add in more 'browns'. Hopefully with Autumn temperatures and leave dropping, there will soon be some more brown materials to add in.
 
-# bokashi
+## bokashi
 
-Bokashi is a process to convert food waste into plant food. It uses bacteria to ferment food waste and break it down into compost for the garden. The fermentation occurs in an anaerobic environment (a sealed container), so it doesn’t attract insects and doesn’t smell much. (When the container is opened, it gives off a fermented, pickle-like smell - rather than a decomposing, composting smell.) 
+Bokashi is a process to convert food waste into plant food. It uses bacteria to ferment food waste and break it down into compost for the garden. The fermentation occurs in an anaerobic environment (a sealed container), so it doesn’t attract insects and doesn’t smell much. (When the container is opened, it gives off a fermented, pickle-like smell - rather than a decomposing, composting smell.)
 
 It results in:
+
 - __waste liquid__ (leachate), which can be diluted and added to the soil or sprayed on the leaves of plants; and
 - __waste matter__, which can be dug into soil in trenches and covered with soil, to condition the soil. It can also be added to worm farms or conventional composting systems.
 
@@ -46,15 +47,15 @@ _2024-11-02_: The bokashi has been undisturbed for a few days in case we had giv
 
 _2025-04-08_: The bokashi went south and has been residing the back yard for some time. It's currently on hold.
 
-# what this looks like for us
+## what this looks like for us
 
-For us, this means having a plastic box with a flip top lid that sits under the sink. **(What is the volume and dimensions of our bokashi buckets?)** As we’re preparing food we collect it in one place, and then as we clean up, we put food scraps into the box. (We discard anything that has mould on it or is already rotting, because it might upset the balance of bacteria.) At the end of each day we add some bokashi bacteria-innoculated rice bran to the top of the box to add more good bacteria and yeasts, then press the contents down with a ‘masher’ to remove as much as air as possible. (We buy commercially-innoculated bokashi bran to add to our bokashi bins.)
+For us, this means having a plastic box with a flip top lid that sits under the sink. __(What is the volume and dimensions of our bokashi buckets?)__ As we’re preparing food we collect it in one place, and then as we clean up, we put food scraps into the box. (We discard anything that has mould on it or is already rotting, because it might upset the balance of bacteria.) At the end of each day we add some bokashi bacteria-innoculated rice bran to the top of the box to add more good bacteria and yeasts, then press the contents down with a ‘masher’ to remove as much as air as possible. (We buy commercially-innoculated bokashi bran to add to our bokashi bins.)
 
 After a couple of weeks, bokashi ‘juice’ starts to appear in the bottom of the box and we can draw it off with a tap built into the box. We drain this liquid once per week (or slightly more in hot weather). This very intense liquid plant food can be applied to soil around plants (diluted in water at a ratio of 100:1, so approximately 1 tablespoon for 2 litres of water). It can also be sprayed on the leaves of plants (diluted in water at a ratio of 500:1, so approximately 1 teaspoon for 5 litres of water).
 
-After a while **(how long?)** the box fills up and we swap it with a second box. We leave the full box outside in a shady spot to continue fermenting until it’s about four weeks old, but it can be longer.
+After a while __(how long?)__ the box fills up and we swap it with a second box. We leave the full box outside in a shady spot to continue fermenting until it’s about four weeks old, but it can be longer.
 
-**We don't yet have firm plans about what we will do with the liquid or matter.** 
+__We don't yet have firm plans about what we will do with the liquid or matter.__
 
 Likely we will start by burying some of the matter in the garden, to start building up the soil. This involves digging a trench away from new plants, adding the waste matter, covering it over and waiting two weeks. It needs two weeks or so in the soil to continue to break down and to lose some of its acidity, before it is ready for planting.
 

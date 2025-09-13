@@ -31,32 +31,50 @@
           class="grid-rows-[auto_1fr] divide-y divide-gray-200 pb-8 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
         >
           <dl class="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-10">
-            <div>
-              <details open>
-                <summary class="ml-6 pb-2 pt-2 text-xl font-bold">
-                  <span>Table of Contents</span>
-                </summary>
+            {{ if .Params.status }}
+              <div class="space-y-1 text-center">
+                <dl class="space-y-10">
+                  <div>
+                    <dt class="sr-only">Page status</dt>
+                    <dd class="text-base font-medium leading-6 text-gray-500">
+                      {{ .Params.status }}
+                      <br />
+                      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                      {{ $dateHuman := .Date | time.Format "2 January 2006" }}
+                      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            {{ end }}
+            {{ if .Fragments.Headings }}
+              <div>
+                <details open>
+                  <summary class="ml-6 pb-2 pt-2 text-xl font-bold">
+                    <span>Table of Contents</span>
+                  </summary>
 
-                <nav class="ml-6">
-                  {{- range .Fragments.Headings }}
-                    <ul>
-                      {{- range .Headings }}
-                        <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
-                        {{- if .Headings }}
-                          <ul>
-                            {{- range .Headings }}
-                              <li>
-                                <a href="#{{ anchorize .ID }}">{{ .Title }}</a>
-                              </li>
-                            {{- end }}
-                          </ul>
+                  <nav class="ml-6">
+                    {{- range .Fragments.Headings }}
+                      <ul>
+                        {{- range .Headings }}
+                          <li><a href="#{{ anchorize .ID }}">{{ .Title }}</a></li>
+                          {{- if .Headings }}
+                            <ul>
+                              {{- range .Headings }}
+                                <li>
+                                  <a href="#{{ anchorize .ID }}">{{ .Title }}</a>
+                                </li>
+                              {{- end }}
+                            </ul>
+                          {{- end }}
                         {{- end }}
-                      {{- end }}
-                    </ul>
-                  {{- end }}
-                </nav>
-              </details>
-            </div>
+                      </ul>
+                    {{- end }}
+                  </nav>
+                </details>
+              </div>
+            {{ end }}
           </dl>
 
           <div
