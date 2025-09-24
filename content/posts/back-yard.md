@@ -54,7 +54,11 @@ lots of watering ...
 
 2025-04-22 The first sign of sprouting seed in the lawn.
 
-2025-08-30 The lawn was mowed, as it started to put on a growth spurt for the start of Spring. Quite a few of the seeds sown in Autumn have taken and needed a trim. The lawn nearest the tree is looking a bit dry and dead.
+2025-08-30 The lawn was mowed, as it started to put on a growth spurt for the start of Spring. Quite a few of the seeds sown in Autumn have taken and needed a trim. The lawn nearest the tree is looking a bit dry and dead and the weeds have made a comeback in a few areas that had been cleared and where the new seed hasn't taken.
+
+2025-09-19 The lawn has put on a massive growth spurt during a recent absence. Sadly, so have the weeds. A bit of hand weeding to pull out the stuff closest to going to seed before applying quite a bit of weedkiller today.
+
+2025-09-26 Going to be time to mow again.
 
 ## back hedge and fence
 
